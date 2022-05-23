@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+
+    <test name="AMAZON india select second highest range tv on QA">
+        <parameter name="env" value="QA"></parameter>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="runProvision" value="local"/>
+        <parameter name="gotoUrl" value="GO_TO_AMAZONIN_URL"/>
+        <classes>
+            <class name="com.testclass.VerifyTVSelectionOnAamazon"/>
+        </classes>
+    </test>
+
+    <test name="AMAZON india select second highest range tv on DEV env">
+        <parameter name="env" value="DEV"></parameter>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="runProvision" value="local"/>
+        <parameter name="gotoUrl" value="GO_TO_AMAZONIN_URL"/>
+        <classes>
+            <class name="com.testclass.VerifyTVSelectionOnAamazon"/>
+        </classes>
+    </test>
+
+    <test name="AMAZON india select second highest range tv on remote">
+        <parameter name="env" value="QA"></parameter>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="runProvision" value="remote"/>
+        <parameter name="gotoUrl" value="GO_TO_AMAZONIN_URL"/>
+        <classes>
+            <class name="com.testclass.VerifyTVSelectionOnAamazon"/>
+        </classes>
+    </test>
+
+</suite>
